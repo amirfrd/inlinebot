@@ -76,7 +76,7 @@ if(isset($msg)){
                 ['text'=>'api monster','url'=>'api.monsterbot.ir'],['text'=>'amir','url'=>'google.com']
               ],
               [
-                ['text'=>'api monster','url'=>'api.monsterbot.ir'],['text'=>'amir','url'=>'google.com']
+                ['text'=>'api monster','url'=>'api.monsterbot.ir'],['text'=>'share','switch_inline_query'=>' ']
               ]
             ]
           ]
