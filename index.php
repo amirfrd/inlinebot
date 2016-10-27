@@ -1,6 +1,6 @@
 <?php
 ob_start();
-define('API_KEY','YOUR BOT TOKEN');
+define('API_KEY','YOURBOTTOKEN');
 //function to send with curl its need php 5.5 or upper
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -16,16 +16,32 @@ function bot($method,$datas=[]){
     }
 }
 $up = json_decode(file_get_contents('php://input'),true);//get updates from webhook
-//file_put_contents('a.txt',json_encode($up));//save update in a.txt file
+file_put_contents('a.txt',json_encode($up));//save update in a.txt file
 $msg = $up['message'];//get update type message
 $callback = $up['callback_query'];//get update type callback_query
 $inline = $up['inline_query'];//get update type inline_query
 
 if(isset($msg)){
   //send it message 
-  bot('sendMessage',array('chat_id'=>$msg['from']['id'],'text'=>'not found'));
+  bot('sendMessage',[
+        'chat_id'=>$msg['chat']['id'],
+        "text"=>'text',
+        'reply_markup'=>json_encode([
+          'inline_keyboard'=>[
+            [
+              ['text'=>"callback1","callback_data"=>"amir"],//inline button
+              ['text'=>"callback2","callback_data"=>"2"]
+            ]
+          ]
+        ])
+      ]);
 }elseif(isset($callback)){
   //ansewr message typed callback
+  if($callback['data'] == 'amir'){
+    bot('answerCallbackQuery',array('callback_query_id'=>$callback['id'],'text'=>'text','show_alert'=>true));//show notficatin
+  }elseif($callback['data'] == '2'){
+    bot('answerCallbackQuery',array('callback_query_id'=>$callback['id'],'text'=>'text','show_alert'=>false));//show notficatin
+  }
 }elseif(isset($inline)){
   //answer as inline
   echo 'QUERY ...';
@@ -76,7 +92,7 @@ if(isset($msg)){
                 ['text'=>'api monster','url'=>'api.monsterbot.ir'],['text'=>'amir','url'=>'google.com']
               ],
               [
-                ['text'=>'api monster','url'=>'api.monsterbot.ir'],['text'=>'share','switch_inline_query'=>' ']
+                ['text'=>'api monster','url'=>'api.monsterbot.ir'],['text'=>'amir','url'=>'google.com']
               ]
             ]
           ]
