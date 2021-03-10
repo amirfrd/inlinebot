@@ -53,7 +53,7 @@ if(isset($msg)){
           'type'=>'photo',
           'id'=>base64_encode(1),
           'title'=>'لیست کانال های امشب',
-          'photo_file_id'=>'AgADBAAEsjEb_Ra1BJEzAsUMDbd3FwNmGQAEFZisHrhQ6vw2DgIAAQI',
+          'photo_file_id'=>'AgACAgQAAxkBAAJeo2BIksbwF4lpNAIV-EnJJuvTobv5AALiszEbu2pIUpG4NdFgVrTmVtLEKl0AAwEAAwIAA20AA1PqAgABHgQ',
           'caption'=>"test \n @Amir_Dev",
           'reply_markup'=>[
             'inline_keyboard'=>[
@@ -67,7 +67,7 @@ if(isset($msg)){
           'type'=>'photo',
           'id'=>base64_encode(2),
           'title'=>'لیست کانال های امشب',
-          'photo_file_id'=>'AgADBAAEsjEb_Ra1BJEzAsUMDbd3FwNmGQAEFZisHrhQ6vw2DgIAAQI',
+          'photo_file_id'=>'AgACAgQAAxkBAAJeo2BIksbwF4lpNAIV-EnJJuvTobv5AALiszEbu2pIUpG4NdFgVrTmVtLEKl0AAwEAAwIAA20AA1PqAgABHgQ',
           'caption'=>"test \n @Amir_Dev",
           'reply_markup'=>[
             'inline_keyboard'=>[
@@ -81,7 +81,7 @@ if(isset($msg)){
           'type'=>'photo',
           'id'=>base64_encode(3),
           'title'=>'لیست کانال های امشب',
-          'photo_file_id'=>'AgADBAAEsjEb_Ra1BJEzAsUMDbd3FwNmGQAEFZisHrhQ6vw2DgIAAQI',
+          'photo_file_id'=>'AgACAgQAAxkBAAJeo2BIksbwF4lpNAIV-EnJJuvTobv5AALiszEbu2pIUpG4NdFgVrTmVtLEKl0AAwEAAwIAA20AA1PqAgABHgQ',
           'caption'=>"test \n @Amir_Dev",
           'reply_markup'=>[
             'inline_keyboard'=>[
