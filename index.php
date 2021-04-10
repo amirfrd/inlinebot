@@ -1,4 +1,5 @@
 <?php
+//my bot
 ob_start();
 define('API_KEY','134334988:AAHCsUzdKtKhHVF0Upxbbxahq69y-qj7r_0');
 //function to send with curl its need php 5.5 or upper
